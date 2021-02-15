@@ -29,12 +29,12 @@ let seattle={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+' cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'cookies';
+    liEl.textContent='Total:'+total+' cookies';
   }
 };
 seattle.render();
@@ -69,12 +69,12 @@ let tokyo={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+' cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'cookies';
+    liEl.textContent='Total:'+total+' cookies';
   }
 };
 tokyo.render();
@@ -109,12 +109,12 @@ let dubai={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+' cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'cookies';
+    liEl.textContent='Total:'+total+' cookies';
   }
 };
 dubai.render();
@@ -148,12 +148,12 @@ let paris={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+' cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'cookies';
+    liEl.textContent='Total:'+total+' cookies';
   }
 };
 paris.render();
@@ -187,12 +187,12 @@ let lima={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+' cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'cookies';
+    liEl.textContent='Total:'+total+' cookies';
   }
 };
 lima.render();
