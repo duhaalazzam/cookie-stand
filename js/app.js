@@ -29,12 +29,12 @@ let seattle={
     {
       liEl=document.createElement('li');
       ulEl.appendChild(liEl);
-      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'Cookies';
+      liEl.textContent=timeArr[i]+':'+this.cookPerHour[i]+'cookies';
       total=total+this.cookPerHour[i];
     }
     liEl=document.createElement('li');
     ulEl.appendChild(liEl);
-    liEl.textContent='Total:'+total+'Cookies';
+    liEl.textContent='Total:'+total+'cookies';
   }
 };
 seattle.render();
