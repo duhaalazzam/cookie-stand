@@ -3,6 +3,7 @@
 let timeArr=['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 let bodyEl=document.getElementById('body');
 let table=document.createElement('table');
+let locationArr=[];
 bodyEl.appendChild(table);
 function BranchLocation(location,minCusPerHour,maxCusPerHour,avgCookPercus)
 {
@@ -12,6 +13,7 @@ function BranchLocation(location,minCusPerHour,maxCusPerHour,avgCookPercus)
   this.avgCookPercus=avgCookPercus;
   this.cookPerHour=[];
   this.dayTotal=0;
+  locationArr.push(this);
 }
 BranchLocation.prototype.randNumOfCus=function()
 {
@@ -72,23 +74,52 @@ function footerRow()
   {
     td=document.createElement('td');
     tr.appendChild(td);
-    td.textContent=seattle.cookPerHour[i]+tokyo.cookPerHour[i]+dubai.cookPerHour[i]+paris.cookPerHour[i]+lima.cookPerHour[i];
+    let total=0;
+    for(let j=0;j<locationArr.length;j++)
+    {
+      total=total+locationArr[j].cookPerHour[i];
+    }
+    td.textContent=total;
+    
   }
   td=document.createElement('td');
   tr.appendChild(td);
-  td.textContent=seattle.dayTotal+tokyo.dayTotal+dubai.dayTotal+paris.dayTotal+lima.dayTotal;
+  let total=0;
+  for(let j=0;j<locationArr.length;j++)
+  {
+    total=total+locationArr[j].dayTotal;
+  }
+  td.textContent=total;
 }
-let seattle=new BranchLocation('Seattle',23,65,6.3);
-let tokyo=new BranchLocation('Tokyo',3,24,1.2);
-let dubai=new BranchLocation('Dubai',11,38,3.7);
-let paris=new BranchLocation('Paris',20,38,2.3);
-let lima=new BranchLocation('Lima',2,16,4.6);
- 
-headerRow();
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
-footerRow();
 
+const form = document.getElementById('LocationForm');
+
+form.addEventListener('submit', locationCreator);
+
+
+function locationCreator(event) {
+  // to prevent default behavior from the webpages
+  event.preventDefault();
+  let location = event.target.locationField.value;
+  let min = event.target.minField.value;
+  min=parseInt(min);
+  let max = event.target.maxField.value;
+  max=parseInt(max);
+  let avg = event.target.avgField.value;
+  avg=parseFloat(avg);
+  let newLocation=new BranchLocation(location,min,max,avg);
+  table.deleteRow(table.rows.length-1);
+  newLocation.render();
+  footerRow();
+}
+new BranchLocation('Seattle',23,65,6.3);
+new BranchLocation('Tokyo',3,24,1.2);
+new BranchLocation('Dubai',11,38,3.7);
+new BranchLocation('Paris',20,38,2.3);
+new BranchLocation('Lima',2,16,4.6);
+headerRow();
+for(let i=0;i<locationArr.length;i++)
+{
+  locationArr[i].render();
+}
+footerRow();
