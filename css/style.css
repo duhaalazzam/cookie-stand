@@ -1,4 +1,18 @@
+*{
+    background-color: bisque;
+}
 img{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+}
+table,th,td{
+    border: solid 1px blue;
+}
+form {
+    text-align: center;
+    color:blue;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
 }
