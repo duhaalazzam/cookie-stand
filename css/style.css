@@ -1,7 +1,7 @@
 *{
     background-color: bisque;
 }
-img{
+#logo{
     height: 150px;
     width: 150px;
 }
@@ -15,4 +15,32 @@ form {
 table{
     margin-left: auto;
     margin-right: auto;
+}
+#home{
+    text-align: center;
+}
+#sales{
+    position: relative;
+    float:right;
+    font-size: xx-large;
+    right: 20px;
+}
+#logo{
+    position: relative;
+    top: -40px;
+}
+#family{
+    text-align: center;
+}
+#par{
+    text-align: center;
+}
+#wel{
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(16, 30, 223);
+}
+main #par p{
+    font-size: large;
+    color: rgb(53, 11, 202);
 }
