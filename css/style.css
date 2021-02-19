@@ -18,6 +18,10 @@ table{
 }
 #home{
     text-align: center;
+    font-size: large;
+}
+#home a{
+    text-decoration: none;
 }
 #sales{
     position: relative;
@@ -39,8 +43,24 @@ table{
     text-align: center;
     font-size: xx-large;
     color: rgb(16, 30, 223);
+    font-family: 'Caveat', cursive;
+    background-color: lightcoral;
 }
 main #par p{
     font-size: large;
     color: rgb(53, 11, 202);
+    font-family: Georgia, serif;
+    background-color: darksalmon;
+}
+main h2{
+    font-family: Verdana, sans-serif;
+    color: crimson;
+    background-color:lightgoldenrodyellow;
+}
+header nav{
+    background-color:lightyellow;
+    height: 100px;
+}
+#sales a{
+    text-decoration: none;
 }
